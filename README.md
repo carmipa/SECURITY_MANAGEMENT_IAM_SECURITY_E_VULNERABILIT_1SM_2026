@@ -16,7 +16,7 @@
 
 A disciplina de **Security Management (Vulnerability and Response)** tem como premissa capacitar no entendimento profundo do que é a informação e sua importância para os negócios. Com base em frameworks como **ITIL v4** e melhores práticas de segurança, o conteúdo aborda desde a estruturação de Segurança da Informação (SI) até metodologias práticas de Resposta a Incidentes e Gestão de Vulnerabilidades.
 
-> **Observação:** O conteúdo desta página baseia-se no PDF "Management Aula 001" (único material disponível na pasta do projeto).
+> **Observação:** O conteúdo desta página baseia-se no PDF "Management Aula 001" fornecido nos materiais.
 
 ## 🎯 Principais Objetivos
 
@@ -33,21 +33,22 @@ A disciplina de **Security Management (Vulnerability and Response)** tem como pr
 Garantir que a empresa opere sem interrupções críticas minimizando riscos. Os três pilares fundamentais são:
 
 ```mermaid
-mindmap
-  root((Tríade CID))
-    Confidencialidade
-      ::icon(fa fa-user-secret)
-      Impedir acessos não autorizados
-      Conformidade Legal (LGPD, GDPR)
-      Proteger segredos comerciais
-    Integridade
-      ::icon(fa fa-lock)
-      Impedir modificações não autorizadas
-      Evitar fraudes ou manipulação de dados
-    Disponibilidade
-      ::icon(fa fa-server)
-      Prevenir downtime (Ransomware, DDoS)
-      Garantir acesso e continuidade
+flowchart TD
+    A{{"🛡️ Segurança da Informação"}}
+    
+    A --- B["Confidencialidade"]
+    A --- C["Integridade"]
+    A --- D["Disponibilidade"]
+
+    B -.-> B1{"Impedir acessos<br>não autorizados"}
+    B -.-> B2{"Conformidade Legal<br>(LGPD, GDPR)"}
+    B -.-> B3{"Proteger segredos<br>comerciais"}
+
+    C -.-> C1{"Impedir modificações<br>não autorizadas"}
+    C -.-> C2{"Evitar fraudes ou<br>manipulação de dados"}
+
+    D -.-> D1{"Prevenir downtime<br>(Ransomware, DDoS)"}
+    D -.-> D2{"Garantir acesso e<br>continuidade"}
 ```
 
 ---
@@ -58,20 +59,12 @@ A informação não é estática, ela deve ser protegida continuamente de acordo
 
 ```mermaid
 flowchart LR
-    A[Criada] --> B[Armazenada]
-    B --> C[Processada]
-    C --> D[Transmitida]
-    D --> E[Utilizada]
-    E --> F[Mantida]
-    F --> G[Descartada]
-
-    style A fill:#e1f5fe,stroke:#01579b
-    style B fill:#e3f2fd,stroke:#1565c0
-    style C fill:#bbdefb,stroke:#0d47a1
-    style D fill:#90caf9,stroke:#0b3c5d
-    style E fill:#64b5f6,stroke:#0b3c5d
-    style F fill:#42a5f5,stroke:#0b3c5d
-    style G fill:#ffebee,stroke:#b71c1c
+    A([Criada]) ==> B([Armazenada])
+    B ==> C([Processada])
+    C ==> D([Transmitida])
+    D ==> E([Utilizada])
+    E ==> F([Mantida])
+    F ==> G([Descartada])
 ```
 
 ---
@@ -90,7 +83,8 @@ A evolução até a tomada de decisão estruturada segue uma cadeia lógica:
 ## 👩‍🏫 Docência e Contato
 
 **Professor: José Ricardo Machado**
-- 🎓 _Coordenador de Infraestrutura, Arquitetura e GRC no SOC da Embratel_
+
+- 🎓 *Coordenador de Infraestrutura, Arquitetura e GRC no SOC da Embratel*
 - 💼 Experiência: 16+ anos em TI, Segurança, IAM, Gestão de Riscos e Compliance.
 - 📧 Contato: `profjose.machado@fiap.com.br`
 
